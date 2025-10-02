@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+import dj_database_url
 
 load_dotenv()
 
@@ -23,12 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zta09e!+usr53q^j6x)9b38l8uz8y2fr-9mcb#aal^s-^^()8#'
+SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['codeandote-interview-production.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1']
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME: ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition
@@ -94,14 +98,21 @@ HOST = os.getenv('HOST')
 PASSWORD = os.getenv('PASSWORD')
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'defaultdb',
-        'USER': 'avnadmin',
-        'PASSWORD': PASSWORD,
-        'HOST': HOST,
-        'PORT': '11207'
-    }
+    # 'default': {
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'defaultdb',
+        # 'USER': 'avnadmin',
+        # 'PASSWORD': PASSWORD,
+        # 'HOST': HOST,
+        # 'PORT': '11207'
+    # }
+    'default': 
+        # dj_database_url() // esto también es funcional
+        dj_database_url.config(
+            # default='postgresql://postgres:postgres@localhost:5432/mysite',
+            default='sqlite:///db.sqlite3', # con esto le índicamos que en desarrollo utiliza sqlite3 y en produccón leerá la variable de database_url o la de postgres
+            conn_max_age=600
+        )
 }
 
 CLOUD_NAME = os.getenv('CLOUD_NAME')
@@ -176,10 +187,12 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = f'/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
