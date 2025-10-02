@@ -9,3 +9,4 @@ img
 *.py[cod]
 # .env
 staticfiles
+.env
