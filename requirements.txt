@@ -9,7 +9,7 @@ coreschema==0.0.4
 cryptography==46.0.1
 cycler==0.12.1
 dj-database-url==3.0.1
-Django==4.2.24
+Django==4.0
 django-cloudinary-storage==0.3.0
 django-colorfield==0.14.0
 django-cors-headers==4.8.0
