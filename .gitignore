@@ -1,0 +1,11 @@
+# DB
+db.sqlite3
+img
+# Cache files
+*.pyc
+# Migrations
+**/__pycache__/
+**/migrations/
+*.py[cod]
+# .env
+staticfiles
