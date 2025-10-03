@@ -50,10 +50,13 @@ def generate_product_name():
 
 def generate_product_description():
     features = [
-        "sleek design", "lightweight build", "intuitive functionality", "durable materials",
-        "long-lasting battery", "high performance", "smart features", "compact size",
-        "ergonomic style", "modern aesthetics"
-    ]
+    "sleek design", "lightweight build", "intuitive functionality", "durable materials",
+    "long-lasting battery", "high performance", "smart features", "compact size",
+    "ergonomic style", "modern aesthetics", "user-friendly interface", "premium quality",
+    "cutting-edge technology", "fast processing speed", "energy-efficient design", 
+    "versatile capabilities", "seamless integration", "robust construction", 
+    "minimalistic look", "adaptive features", "advanced connectivity", "enhanced security"
+]
 
     use_cases = [
     "Perfect for home or office use.",
@@ -118,7 +121,7 @@ def generate_product_description():
     use_case = random.choice(use_cases)
 
     description = (
-        f"This product combines {feature1} with {feature2}. "
+        f"This product combines {feature1}, {random.choice(features)}, {random.choice(features)} with {feature2} & {random.choice(features)}. This is something like {random.choice(features)} and finally {random.choice(features)}"
         f"{use_case}"
     )
 
@@ -139,8 +142,9 @@ def random_decimal(min_value=150, max_value=99999, decimals=2):
 
 # Random id
 def random_index():
-    indices = [5,6,7,8,9,10,11,12,13,14]
-    return random.choice(indices)
+    from ecommerce.models import Product
+    index_list = [item.pk for item in Product.objects.all()]
+    return random.choice(index_list)
 
 def random_image():
     return random.choice(img_list)

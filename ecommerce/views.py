@@ -21,9 +21,9 @@ class ListItemsAPIView(ListAPIView):
     # Pagination class
     pagination_class = CustomPageNumberPagination
 
-    # filterset_class = ProductFilter
+    filterset_class = ProductFilter
 
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
     # Retrieve all items
     queryset = Product.objects.all()
@@ -39,13 +39,13 @@ class ListFilterItems(ListAPIView):
     filter_backends = [DjangoFilterBackend,
                     filters.SearchFilter, filters.OrderingFilter]
 
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
     filterset_fields = ['id', 'name', 'price', 'category', 'category__name']
 
-    # search_fields = ['id', 'name', 'price', 'category']
+    search_fields = ['id', 'name', 'price', 'category']
 
-    # ordering_fields = ['id', 'name', 'price']
+    ordering_fields = ['id', 'name', 'price']
 
     # Retrieve all items
     def get_queryset(self):
@@ -53,7 +53,7 @@ class ListFilterItems(ListAPIView):
 
 class CreateItemAPIView(CreateAPIView):
     queryset = Product.objects.all()
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     serializer_class = CreateProductSerializer
 
 class ItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
