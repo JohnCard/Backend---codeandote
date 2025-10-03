@@ -23,7 +23,7 @@ class ListItemsAPIView(ListAPIView):
 
     filterset_class = ProductFilter
 
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     # Retrieve all items
     queryset = Product.objects.all()
@@ -39,7 +39,7 @@ class ListFilterItems(ListAPIView):
     filter_backends = [DjangoFilterBackend,
                     filters.SearchFilter, filters.OrderingFilter]
 
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     filterset_fields = ['id', 'name', 'price', 'category', 'category__name']
 
@@ -53,7 +53,7 @@ class ListFilterItems(ListAPIView):
 
 class CreateItemAPIView(CreateAPIView):
     queryset = Product.objects.all()
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = CreateProductSerializer
 
 class ItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):

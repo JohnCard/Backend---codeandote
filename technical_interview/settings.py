@@ -99,12 +99,12 @@ PASSWORD = os.getenv('PASSWORD')
 
 DATABASES = {
     # 'default': {
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'defaultdb',
-        # 'USER': 'avnadmin',
-        # 'PASSWORD': PASSWORD,
-        # 'HOST': HOST,
-        # 'PORT': '11207'
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'defaultdb',
+    #     'USER': 'avnadmin',
+    #     'PASSWORD': PASSWORD,
+    #     'HOST': HOST,
+    #     'PORT': '11207'
     # }
     'default': 
         # dj_database_url() // esto también es funcional
