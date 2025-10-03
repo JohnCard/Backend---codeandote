@@ -21,7 +21,7 @@ class ListItemsAPIView(ListAPIView):
     # Pagination class
     pagination_class = CustomPageNumberPagination
 
-    filterset_class = ProductFilter
+    # filterset_class = ProductFilter
 
     # permission_classes = [IsAuthenticated]
 
@@ -43,9 +43,9 @@ class ListFilterItems(ListAPIView):
 
     filterset_fields = ['id', 'name', 'price', 'category', 'category__name']
 
-    search_fields = ['id', 'name', 'price', 'category']
+    # search_fields = ['id', 'name', 'price', 'category']
 
-    ordering_fields = ['id', 'name', 'price']
+    # ordering_fields = ['id', 'name', 'price']
 
     # Retrieve all items
     def get_queryset(self):

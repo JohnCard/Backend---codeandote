@@ -109,8 +109,8 @@ DATABASES = {
     'default': 
         # dj_database_url() // esto también es funcional
         dj_database_url.config(
-            # default='postgresql://postgres:postgres@localhost:5432/mysite',
-            default='sqlite:///db.sqlite3', # con esto le índicamos que en desarrollo utiliza sqlite3 y en produccón leerá la variable de database_url o la de postgres
+            default='postgresql://django_database_7j0l_user:c4aPrGpf9GzVoPldcfsaweMc1OXyFNlD@dpg-d3fgcs37mgec73bb9hug-a.oregon-postgres.render.com/django_database_7j0l',
+            # default='sqlite:///db.sqlite3', # con esto le índicamos que en desarrollo utiliza sqlite3 y en produccón leerá la variable de database_url o la de postgres
             conn_max_age=600
         )
 }
