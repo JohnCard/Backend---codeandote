@@ -1,6 +1,5 @@
 from rest_framework.serializers import ModelSerializer
 from .models import Product, Category
-from rest_framework import serializers
 
 class CategorySerializer(ModelSerializer):
 
@@ -9,15 +8,6 @@ class CategorySerializer(ModelSerializer):
         fields = ["id", "name"]
 
 class ProductSerializer(ModelSerializer):
-
-    # Foreign relationships
-    category = CategorySerializer(read_only=True)
-
-    class Meta:
-        model = Product
-        fields = ['id', 'name', 'description', 'price', 'category', 'image']
-
-class SecondProductSerializer(ModelSerializer):
 
     # Foreign relationships
     category = CategorySerializer(read_only=True)

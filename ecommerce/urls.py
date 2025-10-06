@@ -1,12 +1,11 @@
 from django.urls import path, include
 from rest_framework import routers
-from rest_framework.documentation import include_docs_urls
-from .views import ListItemsAPIView, ItemRetrieveUpdateDestroyAPIView, CategoryAPIView, EcommerceExcelReport, CreateItemAPIView, ListFilterItems
+from .views import ListItemsAPIView, ItemRetrieveUpdateDestroyAPIView, CategoryAPIView, EcommerceExcelReport, CreateItemAPIView, ListFilterItems, ProductGeneric, ProductAPIView
 from ecommerce import views
 
 # api versioning
 router = routers.DefaultRouter()
-router.register(r'items', views.ProductGeneric, 'items')
+router.register(r'items', ProductGeneric, 'items')
 
 urlpatterns = [
     # List item instances
@@ -23,4 +22,5 @@ urlpatterns = [
     path('ecommerce-report', EcommerceExcelReport, name='report'),
     # api router
     path('item-api/', include(router.urls)),
+    path('product-list', ProductAPIView.as_view(), name='product_api')
 ]

@@ -2,13 +2,12 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, viewsets
 from rest_framework.generics import RetrieveUpdateDestroyAPIView, CreateAPIView, ListAPIView
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from rest_framework.authentication import TokenAuthentication
 from openpyxl import Workbook
 from django.http import HttpResponse
 # 
 from helpers.pagination import CustomPageNumberPagination
 from .models import Product, Category
-from .serializers import ProductSerializer, CategorySerializer, ManageProductSerializer, SecondProductSerializer
+from .serializers import ProductSerializer, CategorySerializer, ManageProductSerializer
 from helpers.functions import create_excel_table, bar, line, pie, histogram
 from helpers.styles import DEFAULT_STYLE_DIC
 from .filters import ProductFilter
@@ -30,7 +29,7 @@ class ListItemsAPIView(ListAPIView):
 
 class ListFilterItems(ListAPIView):
     # Define serializer class
-    serializer_class = SecondProductSerializer
+    serializer_class = ProductSerializer
 
     # Pagination class
     pagination_class = CustomPageNumberPagination
@@ -191,4 +190,10 @@ class ProductGeneric(viewsets.ModelViewSet):
     permission_classes = [AllowAny]
     queryset = Product.objects.all()
 
-
+class ProductAPIView(ListAPIView):
+    # Define serializer class
+    serializer_class = ProductSerializer
+    permission_classes = [AllowAny]
+    # Pagination class
+    pagination_class = CustomPageNumberPagination
+    queryset = Product.objects.all()
