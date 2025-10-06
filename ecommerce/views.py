@@ -23,7 +23,7 @@ class ListItemsAPIView(ListAPIView):
 
     filterset_class = ProductFilter
 
-    # permission_classes = [AllowAny]
+    permission_classes = [AllowAny]
 
     # Retrieve all items
     queryset = Product.objects.all()
@@ -39,7 +39,7 @@ class ListFilterItems(ListAPIView):
     filter_backends = [DjangoFilterBackend,
                     filters.SearchFilter, filters.OrderingFilter]
 
-    # permission_classes = [AllowAny]
+    permission_classes = [AllowAny]
 
     filterset_fields = ['id', 'name', 'price', 'category', 'category__name']
 
@@ -53,14 +53,14 @@ class ListFilterItems(ListAPIView):
 
 class CreateItemAPIView(CreateAPIView):
     queryset = Product.objects.all()
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     serializer_class = CreateProductSerializer
 
 class ItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     # Define serializer class
     serializer_class = CreateProductSerializer
 
-    # permission_classes = [AllowAny]
+    permission_classes = [AllowAny]
 
     # Define look up field
     lookup_field = "id"
@@ -71,7 +71,7 @@ class ItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
 class CategoryAPIView(ListAPIView):
     # Define serializer class
     serializer_class = CategorySerializer
-    # permission_classes = [AllowAny]
+    permission_classes = [AllowAny]
     # Pagination class
     pagination_class = CustomPageNumberPagination
     queryset = Category.objects.all()
@@ -188,5 +188,5 @@ def EcommerceExcelReport(request):
 
 class ProductGeneric(viewsets.ModelViewSet):
     serializer_class = CreateProductSerializer
-    # permission_classes = [AllowAny]
+    permission_classes = [AllowAny]
     queryset = Product.objects.all()

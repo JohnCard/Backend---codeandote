@@ -169,21 +169,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # cors autorization
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:5500', 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io']
+    'http://127.0.0.1:5500', 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io', '127.0.0.1', 'https://online-ecommerce-ten.vercel.app']
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:5500", 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io']
+    "http://127.0.0.1:5500", 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io', '127.0.0.1', 'https://online-ecommerce-ten.vercel.app']
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        # 'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
         # 'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        # 'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
