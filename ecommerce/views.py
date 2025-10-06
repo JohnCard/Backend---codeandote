@@ -1,8 +1,8 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, viewsets
 from rest_framework.generics import RetrieveUpdateDestroyAPIView, CreateAPIView, ListAPIView
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.schemas import coreapi
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.authentication import TokenAuthentication
 from openpyxl import Workbook
 from django.http import HttpResponse
 # 
@@ -23,7 +23,7 @@ class ListItemsAPIView(ListAPIView):
 
     filterset_class = ProductFilter
 
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
 
     # Retrieve all items
     queryset = Product.objects.all()
@@ -39,7 +39,7 @@ class ListFilterItems(ListAPIView):
     filter_backends = [DjangoFilterBackend,
                     filters.SearchFilter, filters.OrderingFilter]
 
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
 
     filterset_fields = ['id', 'name', 'price', 'category', 'category__name']
 
@@ -59,6 +59,8 @@ class CreateItemAPIView(CreateAPIView):
 class ItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     # Define serializer class
     serializer_class = CreateProductSerializer
+
+    permission_classes = [AllowAny]
 
     # Define look up field
     lookup_field = "id"
@@ -185,4 +187,5 @@ def EcommerceExcelReport(request):
 
 class ProductGeneric(viewsets.ModelViewSet):
     serializer_class = CreateProductSerializer
+    permission_classes = [AllowAny]
     queryset = Product.objects.all()
