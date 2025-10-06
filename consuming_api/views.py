@@ -16,18 +16,18 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 class CountryAPIView(ListCreateAPIView):
     # Define serializer class
     serializer_class = CountrySerializer
-    
+
     # Pagination class
     pagination_class = CustomPageNumberPagination
 
     # Filters
     filter_backends = [DjangoFilterBackend,
                     filters.SearchFilter, filters.OrderingFilter]
-    
+
     filterset_fields = ['id', 'name', 'region', 'subregion', 'capital']
-    
+
     search_fields = ['id']
-    
+
     ordering_fields = ['id', 'name']
 
     # Save bias
@@ -37,7 +37,7 @@ class CountryAPIView(ListCreateAPIView):
     # Retrieve all orders
     def get_queryset(self):
         return Country.objects.filter()
-    
+
 class CountryRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = CountrySerializer
 
