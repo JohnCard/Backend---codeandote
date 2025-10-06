@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 # DEBUG = 'RENDER' not in os.environ
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'https://online-ecommerce-ten.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://online-ecommerce-ten.vercel.app', 'https://backend-django-87m0.onrender.com']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME: ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
@@ -169,10 +169,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # cors autorization
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:5500', 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io', 'https://online-ecommerce-ten.vercel.app']
+    'http://127.0.0.1:5500', 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io', 'https://backend-django-87m0.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:5500", 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io', 'https://online-ecommerce-ten.vercel.app']
+    "http://127.0.0.1:5500", 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io', 'https://backend-django-87m0.onrender.com']
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
