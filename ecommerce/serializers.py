@@ -10,7 +10,7 @@ class CategorySerializer(ModelSerializer):
 class ProductSerializer(ModelSerializer):
 
     # Foreign relationships
-    category = CategorySerializer(read_only=True)
+    category = CategorySerializer()
 
     class Meta:
         model = Product

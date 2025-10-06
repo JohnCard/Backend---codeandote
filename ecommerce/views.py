@@ -4,13 +4,12 @@ from rest_framework.generics import RetrieveUpdateDestroyAPIView, CreateAPIView,
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from openpyxl import Workbook
 from django.http import HttpResponse
-# 
-from helpers.pagination import CustomPageNumberPagination
 from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer, ManageProductSerializer
+from .filters import ProductFilter
+from helpers.pagination import CustomPageNumberPagination
 from helpers.functions import create_excel_table, bar, line, pie, histogram
 from helpers.styles import DEFAULT_STYLE_DIC
-from .filters import ProductFilter
 # Create your views here.
 
 class ListItemsAPIView(ListAPIView):
@@ -188,12 +187,4 @@ def EcommerceExcelReport(request):
 class ProductGeneric(viewsets.ModelViewSet):
     serializer_class = ManageProductSerializer
     permission_classes = [AllowAny]
-    queryset = Product.objects.all()
-
-class ProductAPIView(ListAPIView):
-    # Define serializer class
-    serializer_class = ProductSerializer
-    permission_classes = [AllowAny]
-    # Pagination class
-    pagination_class = CustomPageNumberPagination
     queryset = Product.objects.all()
