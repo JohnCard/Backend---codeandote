@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 # DEBUG = 'RENDER' not in os.environ
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'https://online-ecommerce-ten.vercel.app', 'https://backend-django-87m0.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://online-ecommerce-ten.vercel.app']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME: ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
@@ -99,14 +99,6 @@ HOST = os.getenv('HOST')
 PASSWORD = os.getenv('PASSWORD')
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'defaultdb',
-    #     'USER': 'avnadmin',
-    #     'PASSWORD': PASSWORD,
-    #     'HOST': HOST,
-    #     'PORT': '11207'
-    # }
     'default': 
         # dj_database_url() // esto también es funcional
         dj_database_url.config(
@@ -169,10 +161,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # cors autorization
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:5500', 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io', 'https://backend-django-87m0.onrender.com']
+    'http://127.0.0.1:5500', 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io']
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:5500", 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io', 'https://backend-django-87m0.onrender.com']
+    "http://127.0.0.1:5500", 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io']
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [

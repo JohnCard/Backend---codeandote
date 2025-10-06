@@ -17,7 +17,16 @@ class ProductSerializer(ModelSerializer):
         model = Product
         fields = ['id', 'name', 'description', 'price', 'category', 'image']
 
-class CreateProductSerializer(ModelSerializer):
+class SecondProductSerializer(ModelSerializer):
+
+    # Foreign relationships
+    category = CategorySerializer(read_only=True)
+
+    class Meta:
+        model = Product
+        fields = ['id', 'name', 'description', 'price', 'category', 'image']
+
+class ManageProductSerializer(ModelSerializer):
 
     class Meta:
         model = Product

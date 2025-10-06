@@ -8,7 +8,7 @@ from django.http import HttpResponse
 # 
 from helpers.pagination import CustomPageNumberPagination
 from .models import Product, Category
-from .serializers import ProductSerializer, CategorySerializer, CreateProductSerializer
+from .serializers import ProductSerializer, CategorySerializer, ManageProductSerializer, SecondProductSerializer
 from helpers.functions import create_excel_table, bar, line, pie, histogram
 from helpers.styles import DEFAULT_STYLE_DIC
 from .filters import ProductFilter
@@ -30,7 +30,7 @@ class ListItemsAPIView(ListAPIView):
 
 class ListFilterItems(ListAPIView):
     # Define serializer class
-    serializer_class = ProductSerializer
+    serializer_class = SecondProductSerializer
 
     # Pagination class
     pagination_class = CustomPageNumberPagination
@@ -54,11 +54,11 @@ class ListFilterItems(ListAPIView):
 class CreateItemAPIView(CreateAPIView):
     queryset = Product.objects.all()
     permission_classes = [IsAuthenticated]
-    serializer_class = CreateProductSerializer
+    serializer_class = ManageProductSerializer
 
 class ItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     # Define serializer class
-    serializer_class = CreateProductSerializer
+    serializer_class = ManageProductSerializer
 
     permission_classes = [AllowAny]
 
@@ -187,6 +187,8 @@ def EcommerceExcelReport(request):
     return response
 
 class ProductGeneric(viewsets.ModelViewSet):
-    serializer_class = CreateProductSerializer
+    serializer_class = ManageProductSerializer
     permission_classes = [AllowAny]
     queryset = Product.objects.all()
+
+
