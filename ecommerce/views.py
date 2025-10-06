@@ -71,6 +71,7 @@ class ItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
 class CategoryAPIView(ListAPIView):
     # Define serializer class
     serializer_class = CategorySerializer
+    permission_classes = [AllowAny]
     # Pagination class
     pagination_class = CustomPageNumberPagination
     queryset = Category.objects.all()
