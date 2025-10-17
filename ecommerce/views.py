@@ -168,7 +168,7 @@ def EcommerceExcelReport(request):
     # Create table data
     main_data = {'Product': [], 'Description': [], 'Price': [], 'Category': []}
 
-    for i in range(2,55,12):
+    for i in range(2,35,12):
         main_data['Product'] = [name.name for name in items[i-2:i+8]]
         main_data['Description'] = [description.description for description in items[i-2:i+8]]
         main_data['Price'] = [price.price for price in items[i-2:i+8]]

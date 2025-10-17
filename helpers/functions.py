@@ -3,6 +3,7 @@ import requests
 import matplotlib
 matplotlib.use('Agg')  # ⚠️ Importante para evitar errores en macOS
 import matplotlib.pyplot as plt
+from openpyxl.styles import Alignment
 import numpy as np
 import io
 from openpyxl.drawing.image import Image as OpenpyxlImage
@@ -200,6 +201,7 @@ def apply_cell_styles(cell, styles):
     cell.alignment = styles['alignment']
     cell.font = styles['font']
     cell.fill = styles['fill']
+    cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
 
 # Insert a personalized text in a worksheet
 def insert_text(ws, start_cell, end_cell, text, style=None):
@@ -234,16 +236,19 @@ def create_excel_table(ws, datos, styles=None, inicio=(1, 1), not_styles=[]):
     # Write your main data
     for fila_idx, fila in enumerate(filas, start=fila_inicio + 1):
         for col_idx, valor in enumerate(fila, start=col_inicio):
-            ws.row_dimensions[fila_idx].height = 25
+            ws.row_dimensions[fila_idx].height = 60
             celda = ws.cell(row=fila_idx, column=col_idx, value=valor)
-            if ws.column_dimensions[get_column_letter(col_idx)].width < len(str(celda.value)):
+            if len(str(celda.value)) > 100:
+                ws.column_dimensions[get_column_letter(col_idx)].width = 60
+            else:
                 ws.column_dimensions[get_column_letter(col_idx)].width = len(str(celda.value)) + 1
+
             # Aplicar estilo a las celdas de datos si se proporciona
             if styles and col_idx not in not_styles:
                 apply_cell_styles(celda, styles['data'])
                 celda.border = BORDER
 
-# matplotlib section
+# MATPLOTLIB section
 
 # Apply a new image for your excel report specifying a position and a worksheet
 def set_img(ws, position, fig):
