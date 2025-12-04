@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-import dj_database_url
+# import dj_database_url
 
 load_dotenv()
 
@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ['127.0.0.1', 'https://online-ecommerce-ten.vercel.app']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME: ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-
 
 # Application definition
 
@@ -66,8 +65,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-
-    
 ]
 
 ROOT_URLCONF = 'technical_interview.urls'
@@ -98,13 +95,20 @@ HOST = os.getenv('HOST')
 PASSWORD = os.getenv('PASSWORD')
 
 DATABASES = {
-    'default': 
-        # dj_database_url() // esto también es funcional
-        dj_database_url.config(
-            default='postgresql://django_database_7j0l_user:c4aPrGpf9GzVoPldcfsaweMc1OXyFNlD@dpg-d3fgcs37mgec73bb9hug-a.oregon-postgres.render.com/django_database_7j0l',
-            # default='sqlite:///db.sqlite3', # con esto le índicamos que en desarrollo utiliza sqlite3 y en produccón leerá la variable de database_url o la de postgres
-            conn_max_age=600
-        )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'defaultdb',
+        'USER': 'avnadmin',
+        'PASSWORD': PASSWORD,
+        'HOST': HOST,
+        'PORT': 11207
+    }
+        # dj_database_url() // primer opción funcional
+        # dj_database_url.config(
+        #     default='postgresql://django_database_7j0l_user:c4aPrGpf9GzVoPldcfsaweMc1OXyFNlD@dpg-d3fgcs37mgec73bb9hug-a.oregon-postgres.render.com/django_database_7j0l',
+        #     default='sqlite:///db.sqlite3', # con esto le índicamos que en desarrollo utiliza sqlite3 y en produccón leerá la variable de database_url o la de postgres
+        #     conn_max_age=600
+        # )
 }
 
 CLOUD_NAME = os.getenv('CLOUD_NAME')
@@ -134,7 +138,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
@@ -185,6 +188,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = f'/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
