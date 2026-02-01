@@ -18,6 +18,7 @@ Otherwise, if the Aiven database is not enabled, no commands will work and the p
 
 ### Create superuser
 ⚠️ Admin Panel Notice
+
 The Django admin panel is currently not enabled for this project.
 At this moment, the admin interface is not required and will not be useful for interacting with the application.
 
