@@ -59,4 +59,4 @@ The frontend vercel link allows users to visualize and interact with the applica
 Once you have confirmed that the server is running correctly by executing python manage.py runserver without any issues, and the server is successfully running in your terminal, you can access the following link to test all functionalities from the frontend client, which will interact with your locally running Django backend server:
 https://online-ecommerce-ten.vercel.app/
 
-Demostrative tube - https://youtu.be/LYhuUxPeQl4
+Demostrative video - https://youtu.be/LYhuUxPeQl4
