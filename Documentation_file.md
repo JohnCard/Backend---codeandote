@@ -1,5 +1,29 @@
 ## Country model documentation
 
+**New countries using masive data**
+
+-   **Notice:** If you want this application to retrieve large amounts of data immediately in order to test GET endpoints with filtering, please perform the following action using Postman.
+-   **Endpoint:** `/consuming_api/generic`
+-   **Method:** `PUT`
+-   **Description:** Updates masive data to create new Country instances based on a limit & init parameters.
+-   **Resquest body:**
+
+```json
+{
+    "init": 1,
+    "limit": 500
+}
+```
+
+-   **Response body:**
+
+```json
+{
+    "ok": true,
+    "succes": "Countries created"
+}
+```
+
 **List every Country instances**
 
 -   **Endpoint:** `/consuming_api/countries`
@@ -131,29 +155,6 @@
 {
     "ok": true,
     "succes": "New country created"
-}
-```
-
-**New countries using masive data**
-
--   **Endpoint:** `/consuming_api/generic`
--   **Method:** `PUT`
--   **Description:** Updates masive data to create new Country instances based on a limit & init parameters.
--   **Resquest body:**
-
-```json
-{
-    "init": 1,
-    "limit": 500
-}
-```
-
--   **Response body:**
-
-```json
-{
-    "ok": true,
-    "succes": "Countries created"
 }
 ```
 
