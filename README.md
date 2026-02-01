@@ -47,6 +47,8 @@ Intended to be used directly from Postman.
 Includes documentation (Check the "Documentation_file.md" to handle the consuming_api app) explaining how to perform requests from scratch.
 No additional database configuration is required for basic usage.
 
+Demostrative video - https://www.youtube.com/watch?v=dwlroKgd7Dw
+
 🔹 App 2 (ecommerce) – Backend API + Frontend Client
 
 Backend application developed with Django REST Framework, built from scratch and designed to be consumed by an external frontend client developed with JavaScript and Bootstrap.
