@@ -36,9 +36,11 @@ For this reason, creating a superuser is optional and not necessary to run or te
 3. Run `python manage.py runserver`.
 
 Project Architecture
+
 This project is composed of two main applications:
 
 🔹 App 1 (consuming_api) – External API (Postman usage)
+
 Backend application developed with Django REST Framework, designed to interact with the external REST Countries API.
 Intended to be used directly from Postman.
 Includes documentation (Check the "Documentation_file.md" to handle the consuming_api app) explaining how to perform requests from scratch.
