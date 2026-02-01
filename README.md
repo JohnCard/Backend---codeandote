@@ -1,4 +1,5 @@
-⚠️ Important note:
+⚠️ Important note
+
 For security reasons, the external database used by this application is not publicly accessible.
 If you want to fully interact with this app (create, update, or delete data), you can contact me (+52 246-239-2759) so database access can be temporarily enabled.
 Otherwise, if the Aiven database is not enabled, no commands will work and the project will not function, even if it has been correctly cloned from GitHub.
