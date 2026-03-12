@@ -4,9 +4,9 @@ from .models import Product, Category
 # Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'price', 'category')
-    search_fields = ('id', 'name', 'price', 'category')
-    list_filter = ('name', 'price', 'category')
+    list_display = ('id', 'name', 'price')
+    search_fields = ('id', 'name', 'price')
+    list_filter = ('name', 'price')
     ordering = ['id', 'name']
 
 admin.site.register(Product, ProductAdmin)

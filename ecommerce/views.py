@@ -5,7 +5,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from openpyxl import Workbook
 from django.http import HttpResponse
 from .models import Product, Category
-from .serializers import ProductSerializer, CategorySerializer, ManageProductSerializer
+from .serializers import ProductSerializer, CategorySerializer, ManageProductSerializer, ProductApiSerializer
 from .filters import ProductFilter
 from helpers.pagination import CustomPageNumberPagination
 from helpers.functions import create_excel_table, bar, line, pie, histogram
@@ -14,14 +14,14 @@ from helpers.styles import DEFAULT_STYLE_DIC
 
 class ListItemsAPIView(ListAPIView):
     # Define serializer class
-    serializer_class = ProductSerializer
+    serializer_class = ManageProductSerializer
 
     # Pagination class
     pagination_class = CustomPageNumberPagination
 
     filterset_class = ProductFilter
 
-    permission_classes = [AllowAny]
+    # permission_classes = [AllowAny]
 
     # Retrieve all items
     queryset = Product.objects.all()
@@ -37,12 +37,10 @@ class ListFilterItems(ListAPIView):
     filter_backends = [DjangoFilterBackend,
                     filters.SearchFilter, filters.OrderingFilter]
 
-    permission_classes = [AllowAny]
+    # permission_classes = [AllowAny]
 
-    filterset_fields = ['id', 'name', 'price', 'category', 'category__name']
-
-    search_fields = ['id', 'name', 'price', 'category']
-
+    filterset_fields = ['id', 'name', 'price']
+    search_fields = ['id', 'name', 'price']
     ordering_fields = ['id', 'name', 'price']
 
     # Retrieve all items
@@ -51,14 +49,14 @@ class ListFilterItems(ListAPIView):
 
 class CreateItemAPIView(CreateAPIView):
     queryset = Product.objects.all()
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     serializer_class = ManageProductSerializer
 
 class ItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     # Define serializer class
     serializer_class = ManageProductSerializer
 
-    permission_classes = [AllowAny]
+    # permission_classes = [AllowAny]
 
     # Define look up field
     lookup_field = "id"
@@ -69,7 +67,7 @@ class ItemRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
 class CategoryAPIView(ListAPIView):
     # Define serializer class
     serializer_class = CategorySerializer
-    permission_classes = [AllowAny]
+    # permission_classes = [AllowAny]
     # Pagination class
     pagination_class = CustomPageNumberPagination
     queryset = Category.objects.all()
@@ -185,6 +183,6 @@ def EcommerceExcelReport(request):
     return response
 
 class ProductGeneric(viewsets.ModelViewSet):
-    serializer_class = ManageProductSerializer
-    permission_classes = [AllowAny]
+    serializer_class = ProductApiSerializer
+    # permission_classes = [AllowAny]
     queryset = Product.objects.all()

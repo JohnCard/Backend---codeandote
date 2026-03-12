@@ -15,7 +15,7 @@ fake = Faker()
 
 img_list = [
     'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png', 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png', 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png', 'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png', 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png', 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png', 'https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png', 'https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png', 'https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png', 'https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png', 'https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png', 'https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png', 'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png', 'https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png', 'https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png', 'https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png', 'https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png', 'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png', 'https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png', 'https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_t.png']
-#
+
 # Additional functions
 def create_category(name, description):
     from ecommerce.models import Category
@@ -143,9 +143,12 @@ def random_decimal(min_value=150, max_value=99999, decimals=2):
 
 # Random id
 def random_index():
-    from ecommerce.models import Product
-    index_list = [item.pk for item in Product.objects.all()]
-    return random.choice(index_list)
+    from ecommerce.models import Category
+    index_list = [item.pk for item in Category.objects.all()]
+    index_a = random.choice(index_list)
+    index_b = random.choice(index_list)
+    index_c = random.choice(index_list)
+    return [index_a, index_b, index_c]
 
 def random_image():
     return random.choice(img_list)

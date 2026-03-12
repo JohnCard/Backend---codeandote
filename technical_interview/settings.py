@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'cloudinary',
     'cloudinary_storage',
+    'coreapi',
+    "drf_spectacular",
+
 ]
 
 MIDDLEWARE = [
@@ -171,15 +174,21 @@ CSRF_TRUSTED_ORIGINS = [
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
-    ],
+    ], # Define cómo Django identifica al usuario (método de autenticación).
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
         # 'rest_framework.authentication.SessionAuthentication',
+    ], # Define qué usuarios pueden acceder al endpoint después de autenticarse.
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ],
+    
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend'
     ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ],
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    # 'DEFAULT_SCHEMA_CLASS': ['rest_framework.schemas.openapi.AutoSchema'],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema"
+
 }
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

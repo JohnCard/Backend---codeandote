@@ -13,8 +13,8 @@ class Product(TrackingModel, BasicModel):
     price = models.DecimalField(verbose_name="Item value", blank=True, null=True, decimal_places=2, max_digits=9, default=random_decimal)
     # Item image
     image = models.ImageField(null=True, blank=True, upload_to='', default=random_image)
-    # Item category
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products', null=True, blank=True, default=random_index)
+    # Item categories
+    categories = models.ManyToManyField(Category, related_name='products', blank=True)
 
     def __str__(self):
         return self.name

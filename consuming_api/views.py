@@ -186,7 +186,6 @@ def excel_report(request):
     line(ws, PROPERTIES)
 
     # Scatter graph
-
     area_list = [country.area for country in total_country_list]
     population_values = [country.population for country in total_country_list]
 
