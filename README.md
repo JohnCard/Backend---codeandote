@@ -38,18 +38,18 @@ For this reason, creating a superuser is optional and not necessary to run or te
 
 Project Architecture
 
-This project is composed of two main applications:
+This project is composed of three applications:
 
-🔹 App 1 (consuming_api) – External API (Postman usage)
+App 1 - (consuming_api) – External API (Postman usage)
 
 Backend application developed with Django REST Framework, designed to interact with the external REST Countries API.
 Intended to be used directly from Postman.
-Includes documentation (Check the "Documentation_file.md" to handle the consuming_api app) explaining how to perform requests from scratch.
+Includes documentation (Check the "rest_countries.md" to handle the consuming_api app) explaining how to perform requests from scratch.
 No additional database configuration is required for basic usage.
 
 Demostrative video - https://www.youtube.com/watch?v=dwlroKgd7Dw
 
-🔹 App 2 (ecommerce) – Backend API + Frontend Client
+App 2 - (ecommerce) – Backend API + Frontend Client - CRUD administrator
 
 Backend application developed with Django REST Framework, built from scratch and designed to be consumed by an external frontend client developed with JavaScript and Bootstrap.
 
@@ -62,4 +62,8 @@ The frontend vercel link allows users to visualize and interact with the applica
 Once you have confirmed that the server is running correctly by executing python manage.py runserver without any issues, and the server is successfully running in your terminal, you can access the following link to test all functionalities from the frontend client, which will interact with your locally running Django backend server:
 https://online-ecommerce-ten.vercel.app/
 
-Demostrative video - https://youtu.be/LYhuUxPeQl4
+Demostrative video - https://youtu.be/sA1ci8obzws
+
+App 3 - accounts - user accounts manager
+
+The accounts app is a user management module. It implements a custom user model that extends AbstractBaseUser and PermissionsMixin, providing email-based authentication with additional features such as balance management, user profile, and profile images.
