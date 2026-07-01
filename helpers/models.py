@@ -17,7 +17,6 @@ class TrackingModel(models.Model):
         # Descending order of field  "created_at"
         ordering = ('-created_at',)
 
-
 class BasicModel(models.Model):
     name = models.CharField(max_length=150, verbose_name="Name", blank=True, null=True, unique=True)
     description = models.TextField(verbose_name="Description", blank=True, null=True)

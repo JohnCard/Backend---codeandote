@@ -1,0 +1,919 @@
+[
+{
+    "model": "ecommerce.category",
+    "pk": 1,
+    "fields": {
+        "created_at": "2026-03-16T18:36:23.874Z",
+        "updated_at": "2026-03-16T18:36:25.099Z",
+        "name": "Motorola - Nearly - Smart Glasses",
+        "description": "This product combines ergonomic style, versatile capabilities, seamless integration with high performance & advanced connectivity. This is something like intuitive functionality and finally sleek designA reliable choice for tech lovers."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 2,
+    "fields": {
+        "created_at": "2026-03-16T18:38:52.094Z",
+        "updated_at": "2026-03-16T18:38:52.354Z",
+        "name": "Arlo - President - Smart Lock",
+        "description": "This product combines lightweight build, sleek design, ergonomic style with versatile capabilities & smart features. This is something like minimalistic look and finally long-lasting batteryThe ideal choice for casual gaming and work."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 3,
+    "fields": {
+        "created_at": "2026-03-16T18:38:52.603Z",
+        "updated_at": "2026-03-16T18:38:52.850Z",
+        "name": "AMD - Bar - Smartphone",
+        "description": "This product combines modern aesthetics, enhanced security, fast processing speed with robust construction & modern aesthetics. This is something like versatile capabilities and finally user-friendly interfaceMade for those who never stop creating."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 4,
+    "fields": {
+        "created_at": "2026-03-16T18:38:53.097Z",
+        "updated_at": "2026-03-16T18:38:53.344Z",
+        "name": "Netgear - Appear - TV",
+        "description": "This product combines long-lasting battery, sleek design, intuitive functionality with energy-efficient design & seamless integration. This is something like intuitive functionality and finally minimalistic lookYour go-to device for multimedia entertainment."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 5,
+    "fields": {
+        "created_at": "2026-03-16T18:38:53.592Z",
+        "updated_at": "2026-03-16T18:38:53.885Z",
+        "name": "Soundcore - Score - Smart Fridge",
+        "description": "This product combines fast processing speed, compact size, modern aesthetics with sleek design & adaptive features. This is something like robust construction and finally compact sizeMade for those who never stop creating."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 6,
+    "fields": {
+        "created_at": "2026-03-16T18:38:54.133Z",
+        "updated_at": "2026-03-16T18:38:54.398Z",
+        "name": "Razer - May - Laptop Stand",
+        "description": "This product combines premium quality, sleek design, cutting-edge technology with compact size & ergonomic style. This is something like intuitive functionality and finally ergonomic styleSleek design meets high performance."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 7,
+    "fields": {
+        "created_at": "2026-03-16T18:38:54.706Z",
+        "updated_at": "2026-03-16T18:38:55.013Z",
+        "name": "Netgear - Eight - Tablet Stand",
+        "description": "This product combines lightweight build, sleek design, modern aesthetics with high performance & high performance. This is something like high performance and finally cutting-edge technologyPerfect for professionals on the go."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 8,
+    "fields": {
+        "created_at": "2026-03-16T18:38:55.321Z",
+        "updated_at": "2026-03-16T18:38:55.627Z",
+        "name": "Acer - Leader - Smart Fridge",
+        "description": "This product combines high performance, robust construction, seamless integration with sleek design & minimalistic look. This is something like durable materials and finally seamless integrationYour perfect travel companion with all-in-one features."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 9,
+    "fields": {
+        "created_at": "2026-03-16T18:38:55.876Z",
+        "updated_at": "2026-03-16T18:38:56.139Z",
+        "name": "ZenGo - Collection - Smart Fridge",
+        "description": "This product combines lightweight build, high performance, intuitive functionality with versatile capabilities & intuitive functionality. This is something like minimalistic look and finally long-lasting batteryStreamline your work with cutting-edge technology."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 10,
+    "fields": {
+        "created_at": "2026-03-16T18:38:56.447Z",
+        "updated_at": "2026-03-16T18:38:56.754Z",
+        "name": "OnePlus - Hotel - Digital Camera",
+        "description": "This product combines fast processing speed, lightweight build, lightweight build with intuitive functionality & enhanced security. This is something like user-friendly interface and finally long-lasting batteryCrafted for maximum efficiency and user experience."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 11,
+    "fields": {
+        "created_at": "2026-03-16T18:38:56.999Z",
+        "updated_at": "2026-03-16T18:38:57.244Z",
+        "name": "Acer - Exactly - Tablet",
+        "description": "This product combines user-friendly interface, durable materials, user-friendly interface with modern aesthetics & sleek design. This is something like long-lasting battery and finally long-lasting batteryReady for everything, from work to play."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 12,
+    "fields": {
+        "created_at": "2026-03-16T18:38:57.572Z",
+        "updated_at": "2026-03-16T18:38:57.819Z",
+        "name": "Fujifilm - Call - Headphones",
+        "description": "This product combines high performance, fast processing speed, energy-efficient design with versatile capabilities & ergonomic style. This is something like lightweight build and finally seamless integrationPerfect for gamers and streamers."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 13,
+    "fields": {
+        "created_at": "2026-03-16T18:38:58.064Z",
+        "updated_at": "2026-03-16T18:38:58.391Z",
+        "name": "Ring - Investment - Digital Camera",
+        "description": "This product combines sleek design, seamless integration, durable materials with adaptive features & smart features. This is something like minimalistic look and finally user-friendly interfaceDesigned to keep you connected wherever you are."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 14,
+    "fields": {
+        "created_at": "2026-03-16T18:38:58.699Z",
+        "updated_at": "2026-03-16T18:38:58.945Z",
+        "name": "Asus - Green - Laptop Sleeve",
+        "description": "This product combines long-lasting battery, high performance, advanced connectivity with seamless integration & minimalistic look. This is something like versatile capabilities and finally enhanced securityThe ultimate tool for content creators."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 15,
+    "fields": {
+        "created_at": "2026-03-16T18:38:59.211Z",
+        "updated_at": "2026-03-16T18:38:59.518Z",
+        "name": "OnePlus - Idea - Laptop Stand",
+        "description": "This product combines sleek design, robust construction, advanced connectivity with modern aesthetics & enhanced security. This is something like smart features and finally fast processing speedDesigned to make work and life easier."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 16,
+    "fields": {
+        "created_at": "2026-03-16T18:38:59.766Z",
+        "updated_at": "2026-03-16T18:39:00.030Z",
+        "name": "TP-Link - Positive - USB Flash Drive",
+        "description": "This product combines ergonomic style, lightweight build, high performance with cutting-edge technology & seamless integration. This is something like premium quality and finally high performanceYour go-to device for multimedia entertainment."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 17,
+    "fields": {
+        "created_at": "2026-03-16T18:39:00.338Z",
+        "updated_at": "2026-03-16T18:39:00.645Z",
+        "name": "Wacom - Federal - Smartwatch",
+        "description": "This product combines adaptive features, sleek design, advanced connectivity with robust construction & robust construction. This is something like seamless integration and finally robust constructionSmart and efficient for daily routines."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 18,
+    "fields": {
+        "created_at": "2026-03-16T18:39:00.952Z",
+        "updated_at": "2026-03-16T18:39:01.258Z",
+        "name": "Bose - Sign - Camera",
+        "description": "This product combines seamless integration, energy-efficient design, lightweight build with compact size & durable materials. This is something like minimalistic look and finally enhanced securityThe ultimate tool for content creators."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 19,
+    "fields": {
+        "created_at": "2026-03-16T18:39:01.504Z",
+        "updated_at": "2026-03-16T18:39:01.751Z",
+        "name": "Xiaomi - Camera - Action Camera",
+        "description": "This product combines high performance, adaptive features, modern aesthetics with versatile capabilities & long-lasting battery. This is something like intuitive functionality and finally robust constructionYour go-to device for multimedia entertainment."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 20,
+    "fields": {
+        "created_at": "2026-03-16T18:39:01.998Z",
+        "updated_at": "2026-03-16T18:39:02.244Z",
+        "name": "Toshiba - Feeling - VR Headset",
+        "description": "This product combines lightweight build, fast processing speed, user-friendly interface with user-friendly interface & sleek design. This is something like robust construction and finally minimalistic lookDesigned to keep you connected wherever you are."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 21,
+    "fields": {
+        "created_at": "2026-03-16T18:39:02.494Z",
+        "updated_at": "2026-03-16T18:39:02.742Z",
+        "name": "Xiaomi - Much - Fitness Tracker",
+        "description": "This product combines intuitive functionality, intuitive functionality, modern aesthetics with lightweight build & smart features. This is something like premium quality and finally high performancePerfect for home or office use."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 22,
+    "fields": {
+        "created_at": "2026-03-16T18:39:02.992Z",
+        "updated_at": "2026-03-16T18:39:03.238Z",
+        "name": "Wyze - On - Smartwatch",
+        "description": "This product combines durable materials, energy-efficient design, durable materials with durable materials & durable materials. This is something like adaptive features and finally minimalistic lookYour go-to device for streaming and content consumption."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 23,
+    "fields": {
+        "created_at": "2026-03-16T18:39:03.487Z",
+        "updated_at": "2026-03-16T18:39:03.819Z",
+        "name": "Nvidia - Hotel - Fitness Tracker",
+        "description": "This product combines lightweight build, premium quality, smart features with compact size & durable materials. This is something like advanced connectivity and finally fast processing speedThe ideal choice for multimedia creators."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 24,
+    "fields": {
+        "created_at": "2026-03-16T18:39:04.126Z",
+        "updated_at": "2026-03-16T18:39:04.434Z",
+        "name": "Harman Kardon - Kitchen - Bluetooth Speaker",
+        "description": "This product combines adaptive features, versatile capabilities, ergonomic style with durable materials & user-friendly interface. This is something like compact size and finally energy-efficient designIdeal for remote work and productivity."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 25,
+    "fields": {
+        "created_at": "2026-03-16T18:39:04.680Z",
+        "updated_at": "2026-03-16T18:39:04.928Z",
+        "name": "Xiaomi - Hair - Smart Glasses",
+        "description": "This product combines compact size, intuitive functionality, lightweight build with advanced connectivity & sleek design. This is something like premium quality and finally lightweight buildPerfect for home or office use."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 26,
+    "fields": {
+        "created_at": "2026-03-16T18:39:05.176Z",
+        "updated_at": "2026-03-16T18:39:05.458Z",
+        "name": "Netgear - Operation - Electric Scooter",
+        "description": "This product combines long-lasting battery, durable materials, ergonomic style with cutting-edge technology & ergonomic style. This is something like premium quality and finally long-lasting batteryDesigned to keep you connected wherever you are."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 27,
+    "fields": {
+        "created_at": "2026-03-16T18:39:05.766Z",
+        "updated_at": "2026-03-16T18:39:06.072Z",
+        "name": "HP - Term - TV",
+        "description": "This product combines adaptive features, compact size, smart features with energy-efficient design & enhanced security. This is something like minimalistic look and finally advanced connectivityThe ideal choice for casual gaming and work."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 28,
+    "fields": {
+        "created_at": "2026-03-16T18:39:06.380Z",
+        "updated_at": "2026-03-16T18:39:06.686Z",
+        "name": "AMD - Matter - 3D Printer",
+        "description": "This product combines energy-efficient design, minimalistic look, cutting-edge technology with high performance & adaptive features. This is something like lightweight build and finally robust constructionEngineered for speed and performance."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 29,
+    "fields": {
+        "created_at": "2026-03-16T18:39:06.996Z",
+        "updated_at": "2026-03-16T18:39:07.242Z",
+        "name": "Xiaomi - Win - Tablet",
+        "description": "This product combines sleek design, seamless integration, cutting-edge technology with durable materials & adaptive features. This is something like energy-efficient design and finally modern aestheticsThe perfect gift for technology enthusiasts."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 30,
+    "fields": {
+        "created_at": "2026-03-16T18:39:07.500Z",
+        "updated_at": "2026-03-16T18:39:07.745Z",
+        "name": "SmartLife - Wall - Smartphone",
+        "description": "This product combines intuitive functionality, compact size, energy-efficient design with energy-efficient design & smart features. This is something like robust construction and finally adaptive featuresThe ideal choice for multimedia creators."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 31,
+    "fields": {
+        "created_at": "2026-03-16T18:39:07.996Z",
+        "updated_at": "2026-03-16T18:39:08.240Z",
+        "name": "Huawei - Special - Smartphone",
+        "description": "This product combines compact size, long-lasting battery, adaptive features with enhanced security & versatile capabilities. This is something like premium quality and finally cutting-edge technologyA must-have for digital photographers and videographers."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 32,
+    "fields": {
+        "created_at": "2026-03-16T18:39:08.530Z",
+        "updated_at": "2026-03-16T18:39:08.774Z",
+        "name": "GoPro - Detail - Mouse",
+        "description": "This product combines sleek design, modern aesthetics, compact size with intuitive functionality & smart features. This is something like sleek design and finally fast processing speedThe perfect solution for home office setups."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 33,
+    "fields": {
+        "created_at": "2026-03-16T18:39:09.021Z",
+        "updated_at": "2026-03-16T18:39:09.348Z",
+        "name": "Samsung - Ground - Smart Lock",
+        "description": "This product combines seamless integration, compact size, minimalistic look with fast processing speed & compact size. This is something like adaptive features and finally adaptive featuresPerfect for personal and professional use."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 34,
+    "fields": {
+        "created_at": "2026-03-16T18:39:09.656Z",
+        "updated_at": "2026-03-16T18:39:09.963Z",
+        "name": "Dell - Itself - Home Security Camera",
+        "description": "This product combines lightweight build, sleek design, sleek design with ergonomic style & seamless integration. This is something like sleek design and finally long-lasting batteryIdeal for everyday tasks and travel."
+    }
+},
+{
+    "model": "ecommerce.category",
+    "pk": 35,
+    "fields": {
+        "created_at": "2026-03-16T18:39:10.271Z",
+        "updated_at": "2026-03-16T18:39:10.578Z",
+        "name": "Wacom - Bag - USB Flash Drive",
+        "description": "This product combines advanced connectivity, ergonomic style, modern aesthetics with fast processing speed & premium quality. This is something like advanced connectivity and finally high performanceIdeal for creative projects and brainstorming sessions."
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 1,
+    "fields": {
+        "created_at": "2026-03-16T19:01:01.945Z",
+        "updated_at": "2026-04-08T17:07:32.665Z",
+        "name": "JBL - Situation - Smart Light Bulb",
+        "description": "This product combines advanced connectivity, durable materials, compact size with user-friendly interface & compact size. This is something like fast processing speed and finally energy-efficient designA reliable choice for tech lovers.",
+        "price": "500.00",
+        "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png",
+        "stock": 8,
+        "categories": [
+            18,
+            16,
+            13
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 2,
+    "fields": {
+        "created_at": "2026-03-16T19:07:29.152Z",
+        "updated_at": "2026-04-06T22:29:17.981Z",
+        "name": "Sennheiser - Analysis - Gaming Console",
+        "description": "This product combines premium quality, smart features, enhanced security with modern aesthetics & sleek design. This is something like sleek design and finally long-lasting batteryReady for everything, from work to play.",
+        "price": "500.00",
+        "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png",
+        "stock": 10,
+        "categories": [
+            13,
+            10,
+            7
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 3,
+    "fields": {
+        "created_at": "2026-03-16T19:07:31.239Z",
+        "updated_at": "2026-04-06T22:44:53.793Z",
+        "name": "Wyze - Affect - Smart Lock",
+        "description": "This product combines energy-efficient design, user-friendly interface, minimalistic look with user-friendly interface & minimalistic look. This is something like versatile capabilities and finally versatile capabilitiesCrafted for maximum efficiency and user experience.",
+        "price": "500.00",
+        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+        "stock": 10,
+        "categories": [
+            30,
+            23,
+            11
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 4,
+    "fields": {
+        "created_at": "2026-03-16T19:07:33.185Z",
+        "updated_at": "2026-03-16T19:07:33.185Z",
+        "name": "Motorola - Leg - USB Flash Drive",
+        "description": "This product combines sleek design, advanced connectivity, intuitive functionality with fast processing speed & intuitive functionality. This is something like versatile capabilities and finally user-friendly interfaceIdeal for quick setups and hassle-free use.",
+        "price": "89590.49",
+        "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png",
+        "stock": 12,
+        "categories": [
+            29,
+            17,
+            3
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 5,
+    "fields": {
+        "created_at": "2026-03-16T19:07:35.131Z",
+        "updated_at": "2026-03-16T19:07:35.131Z",
+        "name": "Beats - Ready - Gaming Console",
+        "description": "This product combines seamless integration, premium quality, compact size with compact size & high performance. This is something like adaptive features and finally high performanceCreate, work, and play anywhere you go.",
+        "price": "23408.17",
+        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png",
+        "stock": 13,
+        "categories": [
+            35,
+            19,
+            1
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 6,
+    "fields": {
+        "created_at": "2026-03-16T19:07:36.943Z",
+        "updated_at": "2026-03-16T19:07:36.943Z",
+        "name": "HyperX - Her - Robot Vacuum",
+        "description": "This product combines sleek design, high performance, energy-efficient design with lightweight build & cutting-edge technology. This is something like versatile capabilities and finally smart featuresIdeal for everyday tasks and travel.",
+        "price": "88213.07",
+        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png",
+        "stock": 12,
+        "categories": [
+            34,
+            12,
+            5
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 7,
+    "fields": {
+        "created_at": "2026-03-16T19:07:38.688Z",
+        "updated_at": "2026-03-16T19:07:38.688Z",
+        "name": "OnePlus - Arrive - Laptop Stand",
+        "description": "This product combines adaptive features, premium quality, minimalistic look with fast processing speed & high performance. This is something like energy-efficient design and finally adaptive featuresThe perfect gift for technology enthusiasts.",
+        "price": "81331.35",
+        "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png",
+        "stock": 9,
+        "categories": [
+            22,
+            17,
+            12
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 8,
+    "fields": {
+        "created_at": "2026-03-16T19:07:40.454Z",
+        "updated_at": "2026-03-16T19:07:40.454Z",
+        "name": "Netgear - Bar - Charging Station",
+        "description": "This product combines user-friendly interface, seamless integration, enhanced security with premium quality & smart features. This is something like robust construction and finally robust constructionA must-have for digital photographers and videographers.",
+        "price": "73932.39",
+        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+        "stock": 11,
+        "categories": [
+            28,
+            26,
+            23
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 9,
+    "fields": {
+        "created_at": "2026-03-16T19:07:42.324Z",
+        "updated_at": "2026-03-16T19:07:42.324Z",
+        "name": "Bose - Would - Webcam",
+        "description": "This product combines sleek design, compact size, robust construction with advanced connectivity & high performance. This is something like enhanced security and finally user-friendly interfaceUpgrade your work setup with state-of-the-art features.",
+        "price": "70656.66",
+        "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png",
+        "stock": 11,
+        "categories": [
+            8,
+            6,
+            2
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 10,
+    "fields": {
+        "created_at": "2026-03-16T19:07:44.034Z",
+        "updated_at": "2026-03-16T19:07:44.034Z",
+        "name": "Canon - Hold - Digital Camera",
+        "description": "This product combines cutting-edge technology, advanced connectivity, smart features with advanced connectivity & robust construction. This is something like energy-efficient design and finally high performanceBuilt for modern living and tech-savvy users.",
+        "price": "53792.26",
+        "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_t.png",
+        "stock": 12,
+        "categories": [
+            35,
+            14,
+            2
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 11,
+    "fields": {
+        "created_at": "2026-03-16T19:07:45.742Z",
+        "updated_at": "2026-03-16T19:07:45.742Z",
+        "name": "Anker - Carry - Graphics Card",
+        "description": "This product combines long-lasting battery, premium quality, lightweight build with modern aesthetics & lightweight build. This is something like advanced connectivity and finally premium qualityReady for everything, from work to play.",
+        "price": "46760.86",
+        "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png",
+        "stock": 7,
+        "categories": [
+            33,
+            29,
+            4
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 12,
+    "fields": {
+        "created_at": "2026-03-16T19:07:47.694Z",
+        "updated_at": "2026-03-16T19:07:47.694Z",
+        "name": "Anker - History - Electric Scooter",
+        "description": "This product combines high performance, energy-efficient design, versatile capabilities with sleek design & compact size. This is something like energy-efficient design and finally sleek designIdeal for everyday tasks and travel.",
+        "price": "49880.46",
+        "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png",
+        "stock": 11,
+        "categories": [
+            34,
+            22,
+            21
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 13,
+    "fields": {
+        "created_at": "2026-03-16T19:07:49.512Z",
+        "updated_at": "2026-03-16T19:07:49.512Z",
+        "name": "Asus - Follow - Smart Glasses",
+        "description": "This product combines energy-efficient design, smart features, versatile capabilities with user-friendly interface & premium quality. This is something like user-friendly interface and finally fast processing speedBuilt to enhance your lifestyle.",
+        "price": "21287.53",
+        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png",
+        "stock": 9,
+        "categories": [
+            32,
+            24,
+            17
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 14,
+    "fields": {
+        "created_at": "2026-03-16T19:07:51.345Z",
+        "updated_at": "2026-04-07T23:04:28.403Z",
+        "name": "Asus - Class - VR Headset",
+        "description": "This product combines high performance, fast processing speed, versatile capabilities with long-lasting battery & adaptive features. This is something like fast processing speed and finally sleek designDesigned to elevate your tech experience.",
+        "price": "76505.77",
+        "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_t.png",
+        "stock": 9,
+        "categories": [
+            30,
+            20,
+            10
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 15,
+    "fields": {
+        "created_at": "2026-03-16T19:07:53.291Z",
+        "updated_at": "2026-03-16T19:07:53.291Z",
+        "name": "Motorola - Find - Mouse",
+        "description": "This product combines energy-efficient design, minimalistic look, smart features with compact size & ergonomic style. This is something like fast processing speed and finally fast processing speedA must-have for digital photographers and videographers.",
+        "price": "77073.77",
+        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png",
+        "stock": 12,
+        "categories": [
+            33,
+            20,
+            10
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 16,
+    "fields": {
+        "created_at": "2026-03-16T19:07:55.032Z",
+        "updated_at": "2026-03-16T19:07:55.032Z",
+        "name": "Samsung - Statement - Router",
+        "description": "This product combines energy-efficient design, seamless integration, enhanced security with minimalistic look & cutting-edge technology. This is something like intuitive functionality and finally long-lasting batteryDesigned for seamless multitasking.",
+        "price": "17418.50",
+        "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png",
+        "stock": 11,
+        "categories": [
+            35,
+            17,
+            16
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 17,
+    "fields": {
+        "created_at": "2026-03-16T19:07:57.086Z",
+        "updated_at": "2026-03-16T19:07:57.086Z",
+        "name": "Corsair - Song - E-Reader",
+        "description": "This product combines ergonomic style, robust construction, seamless integration with seamless integration & versatile capabilities. This is something like compact size and finally intuitive functionalityStreamline your work with cutting-edge technology.",
+        "price": "11317.70",
+        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png",
+        "stock": 13,
+        "categories": [
+            31,
+            17,
+            16
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 18,
+    "fields": {
+        "created_at": "2026-03-16T19:07:58.892Z",
+        "updated_at": "2026-03-16T19:07:58.892Z",
+        "name": "Vizio - By - Robot Vacuum",
+        "description": "This product combines intuitive functionality, premium quality, ergonomic style with durable materials & sleek design. This is something like seamless integration and finally seamless integrationDesigned for comfort and efficiency.",
+        "price": "98121.73",
+        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png",
+        "stock": 12,
+        "categories": [
+            34,
+            17,
+            12
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 19,
+    "fields": {
+        "created_at": "2026-03-16T19:08:00.872Z",
+        "updated_at": "2026-03-16T19:08:00.873Z",
+        "name": "Ring - Hotel - Wi-Fi Extender",
+        "description": "This product combines lightweight build, durable materials, sleek design with energy-efficient design & adaptive features. This is something like intuitive functionality and finally smart featuresUpgrade your work setup with state-of-the-art features.",
+        "price": "61531.23",
+        "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png",
+        "stock": 13,
+        "categories": [
+            8,
+            5,
+            1
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 20,
+    "fields": {
+        "created_at": "2026-03-16T19:08:02.785Z",
+        "updated_at": "2026-03-16T19:08:02.785Z",
+        "name": "Linksys - Chair - Power Bank",
+        "description": "This product combines robust construction, robust construction, intuitive functionality with high performance & ergonomic style. This is something like premium quality and finally compact sizeIdeal for remote work and productivity.",
+        "price": "14502.22",
+        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png",
+        "stock": 10,
+        "categories": [
+            27,
+            25,
+            8
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 21,
+    "fields": {
+        "created_at": "2026-03-16T19:08:04.667Z",
+        "updated_at": "2026-03-16T19:08:04.667Z",
+        "name": "Anker - Clearly - Microphone",
+        "description": "This product combines long-lasting battery, compact size, fast processing speed with minimalistic look & lightweight build. This is something like robust construction and finally modern aestheticsMade for those who never stop creating.",
+        "price": "44849.24",
+        "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png",
+        "stock": 11,
+        "categories": [
+            32,
+            28,
+            10
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 22,
+    "fields": {
+        "created_at": "2026-03-16T19:08:06.670Z",
+        "updated_at": "2026-03-16T19:08:06.670Z",
+        "name": "Fitbit - Race - Laptop",
+        "description": "This product combines lightweight build, sleek design, ergonomic style with smart features & advanced connectivity. This is something like versatile capabilities and finally intuitive functionalityThe perfect gift for technology enthusiasts.",
+        "price": "78675.97",
+        "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png",
+        "stock": 13,
+        "categories": [
+            26,
+            12,
+            3
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 23,
+    "fields": {
+        "created_at": "2026-03-16T19:08:08.529Z",
+        "updated_at": "2026-03-16T19:08:08.530Z",
+        "name": "Sonos - Rise - Webcam",
+        "description": "This product combines ergonomic style, high performance, durable materials with high performance & sleek design. This is something like seamless integration and finally energy-efficient designMade for creative professionals and designers.",
+        "price": "97476.26",
+        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+        "stock": 13,
+        "categories": [
+            20,
+            14,
+            9
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 24,
+    "fields": {
+        "created_at": "2026-03-16T19:08:10.458Z",
+        "updated_at": "2026-03-16T19:08:10.458Z",
+        "name": "Fitbit - Amount - E-Reader",
+        "description": "This product combines smart features, fast processing speed, fast processing speed with cutting-edge technology & premium quality. This is something like robust construction and finally cutting-edge technologyEngineered for speed and performance.",
+        "price": "32971.98",
+        "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png",
+        "stock": 10,
+        "categories": [
+            35,
+            30,
+            13
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 25,
+    "fields": {
+        "created_at": "2026-03-16T19:08:12.445Z",
+        "updated_at": "2026-03-16T19:08:12.445Z",
+        "name": "Netgear - Boy - Charging Station",
+        "description": "This product combines intuitive functionality, user-friendly interface, lightweight build with robust construction & robust construction. This is something like compact size and finally smart featuresA powerful tool for professional workflows.",
+        "price": "38248.66",
+        "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
+        "stock": 13,
+        "categories": [
+            34,
+            32,
+            15
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 26,
+    "fields": {
+        "created_at": "2026-03-16T19:08:14.248Z",
+        "updated_at": "2026-03-16T19:08:14.248Z",
+        "name": "Sennheiser - Take - Gaming Chair",
+        "description": "This product combines versatile capabilities, enhanced security, robust construction with modern aesthetics & advanced connectivity. This is something like adaptive features and finally intuitive functionalityEngineered for speed and performance.",
+        "price": "13964.26",
+        "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_t.png",
+        "stock": 8,
+        "categories": [
+            35,
+            34,
+            3
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 27,
+    "fields": {
+        "created_at": "2026-03-16T19:08:16.193Z",
+        "updated_at": "2026-03-16T19:08:16.193Z",
+        "name": "Oculus - Near - 3D Printer",
+        "description": "This product combines smart features, ergonomic style, advanced connectivity with ergonomic style & high performance. This is something like compact size and finally modern aestheticsMade for creative professionals and designers.",
+        "price": "65126.37",
+        "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png",
+        "stock": 13,
+        "categories": [
+            17,
+            5,
+            3
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 28,
+    "fields": {
+        "created_at": "2026-03-16T19:08:18.048Z",
+        "updated_at": "2026-03-16T19:08:18.048Z",
+        "name": "Beats - Place - Robot Vacuum",
+        "description": "This product combines advanced connectivity, premium quality, modern aesthetics with fast processing speed & versatile capabilities. This is something like enhanced security and finally ergonomic stylePortable, efficient, and ready for adventure.",
+        "price": "76319.59",
+        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png",
+        "stock": 7,
+        "categories": [
+            28,
+            20,
+            1
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 29,
+    "fields": {
+        "created_at": "2026-03-16T19:08:19.879Z",
+        "updated_at": "2026-03-16T19:08:19.879Z",
+        "name": "Msi - Way - Action Camera",
+        "description": "This product combines energy-efficient design, seamless integration, adaptive features with smart features & intuitive functionality. This is something like seamless integration and finally fast processing speedPerfect for home or office use.",
+        "price": "90252.66",
+        "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png",
+        "stock": 10,
+        "categories": [
+            31,
+            30,
+            22
+        ]
+    }
+},
+{
+    "model": "ecommerce.product",
+    "pk": 30,
+    "fields": {
+        "created_at": "2026-03-16T19:08:21.724Z",
+        "updated_at": "2026-03-16T19:08:21.724Z",
+        "name": "Zebra - Respond - Smart Ring",
+        "description": "This product combines user-friendly interface, adaptive features, lightweight build with seamless integration & robust construction. This is something like compact size and finally durable materialsEngineered to meet your everyday needs.",
+        "price": "84193.96",
+        "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png",
+        "stock": 11,
+        "categories": [
+            32,
+            28,
+            8
+        ]
+    }
+},
+{
+    "model": "ecommerce.cartitem",
+    "pk": 99,
+    "fields": {
+        "user": 1,
+        "product": 30,
+        "quantity": 2
+    }
+},
+{
+    "model": "ecommerce.cartitem",
+    "pk": 101,
+    "fields": {
+        "user": 1,
+        "product": 28,
+        "quantity": 2
+    }
+},
+{
+    "model": "ecommerce.collectionitem",
+    "pk": 6,
+    "fields": {
+        "user": 1,
+        "product": 3,
+        "quantity": 2
+    }
+}
+]

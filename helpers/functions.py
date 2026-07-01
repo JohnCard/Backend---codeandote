@@ -16,118 +16,6 @@ fake = Faker()
 img_list = [
     'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png', 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png', 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png', 'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png', 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png', 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png', 'https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png', 'https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png', 'https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png', 'https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png', 'https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png', 'https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png', 'https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png', 'https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png', 'https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png', 'https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png', 'https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png', 'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png', 'https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png', 'https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_t.png']
 
-# Additional functions
-def create_category(name, description):
-    from ecommerce.models import Category
-    category = Category.objects.create(name=name, description=description)
-    category.save()
-
-def generate_product_name():
-    tech_brands = [
-    'NovaTech', 'SmartLife', 'ZenGo', 'Apple', 'Samsung', 'Sony', 'Dell', 'HP', 'Lenovo', 'Asus', 
-    'Microsoft', 'Google', 'Razer', 'Logitech', 'Nvidia', 'AMD', 'Intel', 'Corsair', 'Bose', 'Canon',
-    'GoPro', 'DJI', 'Fujifilm', 'Microsoft Surface', 'Huawei', 'Xiaomi', 'Motorola', 'LG', 'OnePlus', 
-    'Oculus', 'Fitbit', 'Garmin', 'Nokia', 'Alienware', 'Acer', 'Sharp', 'Vizio', 'Toshiba', 'Seagate',
-    'Western Digital', 'Bose', 'Sonos', 'Beats', 'Soundcore', 'Anker', 'Epson', 'Harman Kardon', 'Linksys', 
-    'Netgear', 'TP-Link', 'Zebra', 'CrowdStrike', 'Palo Alto Networks', 'Blue Yeti', 'Msi', 'Sennheiser',
-    'Vivo', 'Realme', 'Meizu', 'JBL', 'HyperX', 'Roku', 'Wacom', 'Bose', 'Arlo', 'Ring', 'Wyze'
-]
-    tech_products = [
-    'Laptop', 'Tablet', 'Smartwatch', 'TV', 'Camera', 'Smartphone', 'Desktop',
-    'Monitor', 'Keyboard', 'Mouse', 'Headphones', 'Earbuds', 'Camera', 'Drone',
-    'Gaming Console', 'External Hard Drive', 'USB Flash Drive', 'Projector', 'VR Headset',
-    'Microphone', 'Smart Glasses', '3D Printer', 'Graphics Card', 'Webcam', 'Router', 'Power Bank',
-    'Electric Scooter', 'Digital Camera', 'Action Camera', 'Fitness Tracker', 'Smart Speaker',
-    'Laptop Stand', 'Gaming Chair', 'Tablet Stand', 'Charging Station', 'Wi-Fi Extender', 'Smart Lock',
-    'Smart Home Hub', 'Smart Thermostat', 'Bluetooth Speaker', 'Smart Fridge', 'Laptop Sleeve', 'Smart Light Bulb',
-    'Robot Vacuum', 'E-Reader', 'Smart Ring', 'Home Security Camera'
-]
-
-    brand = random.choice(tech_brands)
-    adjective = fake.word().capitalize()
-    product = random.choice(tech_products)
-
-    return f"{brand} - {adjective} - {product}"
-
-def generate_product_description():
-    features = [
-    "sleek design", "lightweight build", "intuitive functionality", "durable materials",
-    "long-lasting battery", "high performance", "smart features", "compact size",
-    "ergonomic style", "modern aesthetics", "user-friendly interface", "premium quality",
-    "cutting-edge technology", "fast processing speed", "energy-efficient design", 
-    "versatile capabilities", "seamless integration", "robust construction", 
-    "minimalistic look", "adaptive features", "advanced connectivity", "enhanced security"
-]
-
-    use_cases = [
-    "Perfect for home or office use.",
-    "Ideal for everyday tasks and travel.",
-    "Designed for comfort and efficiency.",
-    "A reliable choice for tech lovers.",
-    "Built to enhance your lifestyle.",
-    "Perfect for gamers and streamers.",
-    "Ideal for remote work and productivity.",
-    "Engineered for speed and performance.",
-    "Your go-to device for multimedia entertainment.",
-    "Compact and portable for on-the-go use.",
-    "Made for creative professionals and designers.",
-    "The ideal companion for your fitness journey.",
-    "Optimized for high-quality audio experiences.",
-    "Designed for seamless multitasking.",
-    "The perfect solution for home office setups.",
-    "Streamline your work with cutting-edge technology.",
-    "A must-have for digital photographers and videographers.",
-    "Perfect for students and learning environments.",
-    "Create, work, and play anywhere you go.",
-    "Crafted for durability and performance.",
-    "The ultimate tool for content creators.",
-    "The ideal choice for multimedia creators.",
-    "Smart and efficient for daily routines.",
-    "Built to be your everyday companion.",
-    "A powerful tool for professional workflows.",
-    "Engineered for the modern, mobile lifestyle.",
-    "Sleek design meets high performance.",
-    "Perfect for family entertainment and movie nights.",
-    "Upgrade your work setup with state-of-the-art features.",
-    "Portable, efficient, and ready for adventure.",
-    "The perfect gift for technology enthusiasts.",
-    "Designed to keep you connected wherever you are.",
-    "Ideal for creative projects and brainstorming sessions.",
-    "A game changer for productivity and innovation.",
-    "Your perfect travel companion with all-in-one features.",
-    "Designed to make work and life easier.",
-    "Built for those who demand power and precision.",
-    "Made for those who never stop creating.",
-    "Compact, lightweight, and always ready to go.",
-    "The perfect fit for any workspace or environment.",
-    "Engineered for fast and seamless performance.",
-    "Streamline your digital life with this powerful device.",
-    "Crafted for maximum efficiency and user experience.",
-    "Ideal for quick setups and hassle-free use.",
-    "The ideal choice for casual gaming and work.",
-    "Perfect for personal and professional use.",
-    "The best tool for managing your digital workflow.",
-    "Built for modern living and tech-savvy users.",
-    "A versatile solution for all your technology needs.",
-    "Designed to elevate your tech experience.",
-    "Perfect for professionals on the go.",
-    "The ultimate productivity tool for busy people.",
-    "Ready for everything, from work to play.",
-    "Your go-to device for streaming and content consumption.",
-    "Engineered to meet your everyday needs."
-    ]
-
-    feature1 = random.choice(features)
-    feature2 = random.choice(features)
-    use_case = random.choice(use_cases)
-
-    description = (
-        f"This product combines {feature1}, {random.choice(features)}, {random.choice(features)} with {feature2} & {random.choice(features)}. This is something like {random.choice(features)} and finally {random.choice(features)}"
-        f"{use_case}"
-    )
-
-    return description
-
 def random_decimal(min_value=150, max_value=99999, decimals=2):
     """
     Genera un número decimal aleatorio entre min_value y max_value
@@ -142,7 +30,7 @@ def random_decimal(min_value=150, max_value=99999, decimals=2):
     return round(number, decimals)
 
 # Random id
-def random_index():
+def random_index_list():
     from ecommerce.models import Category
     index_list = [item.pk for item in Category.objects.all()]
     index_a = random.choice(index_list)
@@ -244,7 +132,7 @@ def create_excel_table(ws, datos, styles=None, inicio=(1, 1), not_styles=[]):
             if len(str(celda.value)) > 100:
                 ws.column_dimensions[get_column_letter(col_idx)].width = 60
             else:
-                ws.column_dimensions[get_column_letter(col_idx)].width = len(str(celda.value)) + 1
+                ws.column_dimensions[get_column_letter(col_idx)].width = len(str(celda.value)) + 4
 
             # Aplicar estilo a las celdas de datos si se proporciona
             if styles and col_idx not in not_styles:

@@ -1,0 +1,5 @@
+@for $i from 3 through 25 {
+    .min-h-#{$i*15} {
+        min-height: #{$i*15}px;
+    }
+}

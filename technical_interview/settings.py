@@ -34,8 +34,9 @@ ALLOWED_HOSTS = ['127.0.0.1', 'https://online-ecommerce-ten.vercel.app']
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME: ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
-# Application definition
+AUTH_USER_MODEL = "accounts.User"
 
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'consuming_api',
     'ecommerce',
+    'accounts',
     # Additional apps
     'rest_framework',
     'rest_framework.authtoken',
@@ -55,7 +57,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'coreapi',
     "drf_spectacular",
-
+    'django.contrib.humanize'
 ]
 
 MIDDLEWARE = [
@@ -75,7 +77,7 @@ ROOT_URLCONF = 'technical_interview.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -97,14 +99,20 @@ WSGI_APPLICATION = 'technical_interview.wsgi.application'
 HOST = os.getenv('HOST')
 PASSWORD = os.getenv('PASSWORD')
 
+# reset database command from terminal (example)
+# DROP DATABASE nombre_bd;
+# CREATE DATABASE nombre_bd CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'defaultdb',
-        'USER': 'avnadmin',
-        'PASSWORD': PASSWORD,
-        'HOST': HOST,
-        'PORT': 11207
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'defaultdb',
+        # 'USER': 'avnadmin',
+        # 'PASSWORD': PASSWORD,
+        # 'HOST': HOST,
+        # 'PORT': 11207
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
         # dj_database_url() // primer opción funcional
         # dj_database_url.config(
@@ -166,10 +174,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # cors autorization
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:5500', 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io']
+    'http://127.0.0.1:5500', 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io', 'http://localhost:5173', 'http://127.0.0.1:5502']
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:5500", 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io']
+    "http://127.0.0.1:5500", 'https://online-ecommerce-ten.vercel.app', 'https://johncard.github.io', 'http://127.0.0.1:5502']
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
@@ -188,17 +196,16 @@ REST_FRAMEWORK = {
     ],
     # 'DEFAULT_SCHEMA_CLASS': ['rest_framework.schemas.openapi.AutoSchema'],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema"
-
 }
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# if not DEBUG:
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = f'/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

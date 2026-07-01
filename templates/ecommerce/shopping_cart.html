@@ -1,0 +1,104 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script>
+        const authToken = "{{auth_token}}"
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>shopping cart</h2>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="accordion" id="accordionExample">
+                    {% for item, stock, categories in items %}
+                        <div class="accordion-item" id="accordion-{{item.id}}">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{forloop.counter}}" aria-expanded="true" aria-controls="collapse{{forloop.counter}}">
+                                    {{item.name}}
+                                </button>
+                            </h2>
+                            <div id="collapse{{forloop.counter}}" class="accordion-collapse collapse {% if forloop.first %} show {% endif %}" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$ {{item.price|intcomma}}</li>
+                                        <li class="list-group-item">
+                                            <span>stock - {{stock}}</span>
+                                            <span class="placeholder col-12 d-none"></span>
+                                        </li>
+                                        <li class="list-group-item">categories - {{categories}}</li>
+                                        <li class="list-group-item">{{item.description}}</li>
+                                        <li class="list-group-item">
+                                            <button class="btn btn-danger" data-class={{item.id}}>remove</button>
+                                            <button class="btn btn-success" data-class={{item.id}}>buy</button>
+                                            <button class="btn btn-danger disabled placeholder d-none"></button>
+                                            <button class="btn btn-success disabled placeholder d-none"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src={{user.image}} class="card-img-top" alt={{user.first_name}}>
+                    <div class="card-body">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{user.first_name}}</li>
+                        <li class="list-group-item">{{user.description}}</li>
+                        <li class="list-group-item">
+                            <span id="balance">${{user.balance|floatformat:2|intcomma}}</span>
+                            <span class="placeholder col-12 d-none" id="balance-span"></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <h2>collection</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">name</th>
+                    <th scope="col">description</th>
+                    <th scope="col">categories</th>
+                    <th scope="col">price</th>
+                    <th scope="col">stock</th>
+                    <th scope="col">action button</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item, stock, categories in collection %}
+                    <tr>
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
+                        <td style="width: 12rem">{{categories}}</td>
+                        <td style="width: 6rem">$ {{item.price|intcomma}}</td>
+                        <td style="width: 5rem">
+                            <span id="table-stock-{{item.id}}">{{stock}}</span>
+                            <span class="placeholder col-12 d-none"></span>
+                        </td>
+                        <td style="width: 8rem">
+                            <button class="btn btn-danger" data-class={{item.id}}>return</button>
+                            <button class="btn btn-danger disabled placeholder d-none"></button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" ></script>
+    <script src="{% static 'js/shopping_cart.js' %}" type="module"></script>
+    <script src="{% static 'js/helpers.js' %}" type="module"></script>
+</body>
+</html>

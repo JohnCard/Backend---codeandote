@@ -1,0 +1,26 @@
+[
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$QqYCPVjCuf3pOwwcEhyRlZ$QUZDMFCvBgTBLL2BLK3b0mUu0oRhnGMleyW8X2HcdkQ=",
+        "is_superuser": true,
+        "created_at": "2026-03-26T01:52:36.148Z",
+        "updated_at": "2026-04-04T04:32:08.312Z",
+        "username": "John_Card_django_veloper",
+        "first_name": "Juan Carlos",
+        "last_name": "Sánchez Martínez",
+        "email": "johncard962@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "last_login": "2026-04-04T04:27:04Z",
+        "date_joined": "2026-03-26T01:52:35Z",
+        "email_verified": false,
+        "balance": "75000.00",
+        "image": "https://cdn-icons-png.freepik.com/512/9398/9398920.png",
+        "description": "Dark area return skin none east range responsibility. Next here away half simply.\nOwn lawyer pull although method. Society assume half effort indicate skill party use.\nYour thing north a billion team.\nSend skill perhaps.",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
